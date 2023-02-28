@@ -84,6 +84,7 @@
 
  .container {
     padding: 1.6rem;
+    max-width: 375px;
  }
 
  /* First Card Styling */
