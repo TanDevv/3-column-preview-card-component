@@ -67,12 +67,140 @@
     isolation: isolate;
   }
 
+  /* General Styling */
+  
+ body {
+    background-color: var(--clr-neutral-verylight-gray); 
+    color: var(--clr-neutral-transparent-white);
 
-.attribution { 
-    font-size: 11px; 
+    font-family: var(--ff-big-shoulders-display);
+    font-size: 0.9375rem;
+
+    display: grid;
+    gap: 0.5;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .container {
+    margin-top: 3rem;
+    padding: 1.6rem;
+ }
+
+ /* First Card Styling */
+
+ .sedans__container {
+    background-color: var(--clr-primary-bright-orange);
+
+    border-top-left-radius: 0.450rem;
+    border-top-right-radius: 0.450rem;
+
+    padding: 2.9rem;
+ }
+
+ /* Second Card Styling */
+
+ .suvs__container {
+    background-color: var(--clr-primary-dark-cyan);
+
+    padding: 2.9rem;
+ }
+
+/* Third Card Styling */
+
+ .luxury__container {
+    background-color: var(--clr-primary-verydark-cyan);
+
+    border-bottom-left-radius: 0.450rem;
+    border-bottom-right-radius: 0.450rem;
+
+    padding: 2.9rem;
+ }
+
+ /* Card Contents Styling */
+
+ .card__title {
+    color:var(--clr-neutral-verylight-gray);
+
+    font-family:var(--ff-lexend-deca);
+    font-size: 2.5rem;
+
+    text-transform: uppercase;
+ }
+
+ .card__content p {
+    line-height: 1.5rem;
+ }
+
+ .card__content {
+    display: grid;
+    gap: 1.4rem;
+ }
+
+ .card__button {
+     background-color:var(--clr-neutral-verylight-gray);
+     
+     border: 2px solid transparent;
+     border-radius: 5rem;
+
+     max-width: 63%;
+     padding: 0.65rem;
+     cursor: pointer;
+ }
+/* Individual Button Styling */
+
+ .sedans__container button {
+    color: var(--clr-primary-bright-orange);
+ }
+
+ .suvs__container button {
+    color:var(--clr-primary-dark-cyan);
+ }
+
+ .luxury__container button {
+    color:var(--clr-primary-verydark-cyan);
+ }
+
+ /* Individual Button Behaviour on Hover and Active */
+
+ .sedans__container button:is(:hover, :active) {
+    background-color:var(--clr-primary-bright-orange);
+    color:var(--clr-neutral-verylight-gray);
+
+    border: 2px solid var(--clr-neutral-verylight-gray);
+    border-radius: 5rem;
+ }
+
+ .suvs__container button:is(:hover, :active) {
+    background-color:var(--clr-primary-dark-cyan);
+    color:var(--clr-neutral-verylight-gray);
+
+    border: 2px solid var(--clr-neutral-verylight-gray);
+    border-radius: 5rem;
+ }
+
+ .luxury__container button:is(:hover, :active) {
+    background-color:var(--clr-primary-verydark-cyan);
+    color:var(--clr-neutral-verylight-gray);
+
+    border: 2px solid var(--clr-neutral-verylight-gray);
+    border-radius: 5rem;
+ }
+
+ /* Footer Styling */
+
+.attribution {
+    color: hsl(0, 0%, 0%); 
+    font-size: 0.9rem; 
     text-align: center; 
 }
-    
+
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/* Footer Behaviour on Hover and Active */
+
+.attribution a:is(:hover, :active) { 
+    color: hsl(0, 0%, 0%); 
 }
