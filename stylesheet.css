@@ -77,13 +77,12 @@
     font-size: 0.9375rem;
 
     display: grid;
-    gap: 0.5;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem
  }
 
  .container {
-    margin-top: 3rem;
     padding: 1.6rem;
  }
 
@@ -203,4 +202,56 @@
 
 .attribution a:is(:hover, :active) { 
     color: hsl(0, 0%, 0%); 
+}
+
+/* Desktop Responsiveness */
+
+@media (min-width: 900px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+       display: grid;
+       grid-template-columns: repeat(3, minmax(0, 1fr));
+
+       max-width: 900px;
+    }
+
+    .card__button {
+        max-width: 70%;
+        padding: 0.60rem;
+        margin-top: 4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sedans__container {
+        background-color: var(--clr-primary-bright-orange);
+        
+        border-top-right-radius: 0;
+        border-top-left-radius: 0.450rem;
+        border-bottom-left-radius: 0.450rem;
+    
+        padding: 2.3rem;
+     }
+    
+     .suvs__container {
+        background-color: var(--clr-primary-dark-cyan);
+    
+        padding: 2.3rem;
+     }
+    
+     .luxury__container {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.450rem;
+        border-bottom-right-radius: 0.450rem;
+    
+        padding: 2.3rem;
+     }
+
+     .attribution { 
+        font-size: 1rem; 
+    }
+    
 }
